@@ -1,0 +1,4 @@
+#+title: Inventory FIPS Mode Setup Status
+
+See if ~/bin/fips-mode-setup~ thinks FIPS mode is /enabled/ or /disabled/.
+

@@ -1,0 +1,10 @@
+{
+    "inventory-fips-mode-setup": {
+        "description": "Inventory kernel parameters set during system boot",
+        "tags": ["untested"],
+        "steps": [
+            "copy policy/main.cf services/inventory-fips-mode-setup/main.cf",
+            "json augments.json def.json"
+        ]
+    }
+}

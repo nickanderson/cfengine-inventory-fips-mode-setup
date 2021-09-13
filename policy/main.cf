@@ -1,0 +1,29 @@
+body file control
+{
+      namespace => "nickanderson";
+}
+bundle agent inventory_fips_mode
+# @brief Inventory the status of fips-mode-setup
+# @inventory "FIPS Mode Setup"
+{
+  classes:
+      "fips_mode_is_enabled"
+        expression => returnszero( "$(_fips_mode_setup_bin) --is-enabled", "noshell" );
+
+  vars:
+      "_fips_mod_setup_bin" string => "/bin/fips-mode-setup";
+
+      "fips_mode_status"
+        string => ifelse( "fips_mode_is_enabled", "Enabled", "Disabled" ),
+        meta => { "inventory", "attribute_name=FIPS Mode Setup" };
+
+  reports:
+    inform_mode|verbose_mode::
+      "FIPS mode is $(fips_mode_status)."
+        if => isvariable( "fips_mode_status" );
+}
+body file control
+{
+        namespace => "default";
+}
+
