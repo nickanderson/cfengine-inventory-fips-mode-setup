@@ -1,9 +1,9 @@
 {
-  "name": "Inventory kernel boot parameters",
-  "description": "Inventory kernel parameters set during system boot",
+  "name": "Inventory FIPS mode setup status",
+  "description": "Inventory the status of fips-mode-setup",
   "provides": {
     "inventory-fips-mode-setup": {
-      "description": "Inventory kernel parameters set during system boot",
+      "description": "Inventory the status of fips-mode-setup",
       "tags": ["untested"],
       "steps": [
         "copy policy/main.cf services/inventory-fips-mode-setup/main.cf",
