@@ -1,4 +1,24 @@
 #+title: Inventory FIPS Mode Setup Status
 
-See if ~/bin/fips-mode-setup~ thinks FIPS mode is /enabled/ or /disabled/.
+* Synopsis
 
+- *Name*: =inventory-fips-mode-setup=
+- *Version*: =0.1.1=
+- *Description*: Inventory if ~fips-mode-setup~ is /Enabled/ or /Disabled/
+
+* Inventory
+
+- /FIPS Mode Setup/ :: =Enabled= or =Disbabled=
+
+* Requirements
+
+- CFEngine version 3.7.4 or greater
+
+* Installation via cfbs
+
+#+begin_example
+  ❯ cfbs search inventory-fips-mode-setup
+  inventory-fips-mode-setup - Inventory the status of fips-mode-setup
+  ❯ cfbs add inventory-fips-mode-setup
+  Added module: inventory-fips-mode-setup
+#+end_example
