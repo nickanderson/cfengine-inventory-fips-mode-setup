@@ -4,6 +4,7 @@
   "provides": {
     "inventory-fips-mode-setup": {
       "description": "Inventory the status of fips-mode-setup",
+      "version": "0.1.2",
       "tags": ["untested"],
       "steps": [
         "copy policy/main.cf services/inventory-fips-mode-setup/main.cf",
